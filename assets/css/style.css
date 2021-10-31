@@ -1,0 +1,508 @@
+/*
+** To compile in terminal: sass [path]/style.scss [path]/style.css
+*/
+/*
+** Variables.
+*/
+/*
+** Global elements.
+*/
+h2 {
+  font-family: "arial";
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #ffffff;
+}
+
+a {
+  font-family: "helvetica";
+  letter-spacing: 0.08em;
+  font-size: 14px;
+  line-height: 1.4em;
+  text-decoration: unset;
+}
+
+.tab--about__container,
+.tab--music__left {
+  font-family: "helvetica";
+  color: #ababab;
+  letter-spacing: 0.08em;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+.tab--about__container a:hover,
+.tab--music__left a:hover {
+  opacity: 0.6;
+}
+
+p::selection,
+span::selection,
+h2::selection,
+a::selection,
+li::selection {
+  background-color: #f25a23;
+  color: #fff;
+}
+
+.container--top {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+body {
+  opacity: 0;
+}
+
+body.faded-in {
+  background-color: #000000;
+  margin: 0px;
+  animation: fadein 3.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.header {
+  background-color: #373538;
+}
+.header #logo {
+  max-width: 130px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  opacity: 0.9;
+  flex-direction: row;
+}
+.nav .nav__tab-links {
+  background-color: #373538;
+  border: none;
+  border-bottom: solid 0.5px #eaeaea;
+  color: #ffffff;
+  padding: 20px 0;
+  margin: 3px 2px 0px 2px;
+  display: flex;
+  flex-grow: 1;
+}
+.nav .nav__tab-links .buttonText {
+  margin: 0 auto;
+  font-family: "arial";
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+.nav .active,
+.nav .nav__tab-links:hover {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav .nav__tab-links:focus {
+  outline: none;
+}
+
+.tab {
+  display: none;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@-moz-keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@-webkit-keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@-ms-keyframes slidein {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@media screen and (max-width: 700px) {
+  .animation {
+    width: 100px;
+    height: 100px;
+    top: 15px;
+    right: 15px;
+  }
+}
+@media screen and (min-width: 701px) {
+  .animation {
+    height: 250px;
+    width: 250px;
+    bottom: 60px;
+    right: 0px;
+  }
+}
+.animation {
+  background-image: url("../img/animation-1.png");
+  background-size: 100% 100%;
+  position: fixed;
+}
+
+.animation.animated {
+  background-image: url("../img/animation-2.png");
+  animation: animate 1.5s;
+  animation-fill-mode: forwards;
+}
+
+/*
+** About Page
+*/
+.tab--about .tab--about__container {
+  margin-top: 38vh;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 801px) {
+  .tab--about .tab--about__container {
+    width: 75%;
+  }
+}
+.tab--about .tab--about__container .tab--about__left {
+  max-width: 45%;
+}
+.tab--about .tab--about__container .tab--about__left img {
+  max-width: 50%;
+  margin: 2vh 0px 0px 40px;
+}
+.tab--about .tab--about__container .tab--about__left .tab--about__info {
+  margin-left: 40px;
+}
+.tab--about .tab--about__container .tab--about__left .tab--about__info .cv {
+  color: #ababab;
+  text-decoration: none;
+  font-family: impact;
+  font-size: 17px;
+}
+.tab--about .tab--about__container .tab--about__left .tab--about__info .email {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  color: #ababab;
+}
+.tab--about .tab--about__container .tab--about__left .tab--about__info .fab {
+  font-size: 20px;
+  color: #ababab;
+  margin-right: 20px;
+}
+.tab--about .tab--about__container .tab--about__left .tab--about__info .fab:hover {
+  opacity: 0.6;
+}
+.tab--about .tab--about__container .tab--about__right {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 0;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-align: right;
+}
+.tab--about .tab--about__container .tab--about__titles {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/*
+** Web Projects
+*/
+.tab--web-projects {
+  margin-top: 50vh;
+}
+.tab--web-projects .tab--web-projects__left {
+  margin-bottom: 60px;
+}
+.tab--web-projects .tab--web-projects__left a {
+  color: #ababab;
+}
+.tab--web-projects .tab--web-projects__left a:hover {
+  color: #ffffff;
+}
+.tab--web-projects li {
+  color: #ababab;
+}
+
+/*
+** Art
+*/
+@media screen and (max-width: 800px) {
+  .tab--art .container--art__row {
+    display: block;
+    height: unset;
+    margin: 0;
+  }
+  .tab--art .container--art__row .container--art__img {
+    margin: 50px auto 0px auto;
+    max-width: 75%;
+  }
+}
+@media screen and (min-width: 801px) {
+  .tab--art .container--art {
+    margin-top: 50vh;
+  }
+  .tab--art .container--art .container--art__row {
+    justify-content: space-around;
+    display: flex;
+    height: 400px;
+    margin: 100px auto;
+  }
+  .tab--art .container--art .container--art__row a {
+    align-self: center;
+    text-align: center;
+    max-width: 250px;
+    -webkit-transition: max-width 1s;
+    transition: max-width 1s;
+  }
+  .tab--art .container--art .container--art__row a .container--art__img.swung {
+    animation: swing 1.3s;
+    animation-fill-mode: forwards;
+  }
+  .tab--art .container--art .container--art__row a .container--art__img {
+    display: flex;
+    margin: 0px;
+    animation: swing;
+    z-index: -1;
+    position: relative;
+    max-width: 100%;
+  }
+  .tab--art .container--art .container--art__row a:hover {
+    max-width: 300px;
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(-5deg);
+  }
+  33% {
+    transform: rotate(3deg);
+  }
+  66% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-moz-keyframes swing {
+  0% {
+    transform: rotate(-5deg);
+  }
+  33% {
+    transform: rotate(3deg);
+  }
+  66% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes swing {
+  0% {
+    transform: rotate(-5deg);
+  }
+  33% {
+    transform: rotate(3deg);
+  }
+  66% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-ms-keyframes swing {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-o-keyframes swing {
+  0% {
+    transform: rotate(-5deg);
+  }
+  33% {
+    transform: rotate(3deg);
+  }
+  66% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/*
+** Music
+*/
+.tab--music .tab--music__container {
+  width: 100%;
+  min-height: 500px;
+}
+@media screen and (max-width: 700px) {
+  .tab--music .tab--music__container .tab--music__left {
+    margin: 8vh 10px 0px 30px;
+  }
+  .tab--music .tab--music__container .tab--music__left .album-cover {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 701px) {
+  .tab--music .tab--music__container .tab--music__left {
+    margin: 38vh 0px 30px 100px;
+  }
+  .tab--music .tab--music__container .tab--music__left .album-cover {
+    width: 25%;
+    -webkit-transition: width 1s;
+    transition: width 1s;
+  }
+  .tab--music .tab--music__container .tab--music__left .album-cover:hover {
+    width: 27%;
+  }
+}
+.tab--music .tab--music__container .album {
+  margin-top: 60px;
+}
+.tab--music .tab--music__container .album a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.tab--music .tab--music__container .album a .album-cover.swung {
+  animation: swing 1.3s;
+  animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 800px) {
+  .container--top {
+    position: relative;
+    top: unset;
+  }
+
+  .tab--about .tab--about__container {
+    margin-top: 8vh;
+    flex-direction: column;
+  }
+  .tab--about .tab--about__container .avatar {
+    max-width: 160px;
+    margin: 0px 0px 0px 40px;
+  }
+  .tab--about .tab--about__container .tab--about__right {
+    margin-left: 40px;
+    text-align: left;
+  }
+
+  .tab--web-projects {
+    margin-left: 40px;
+  }
+
+  .fab {
+    margin-right: 0px;
+  }
+
+  .container--art,
+.tab--web-projects {
+    margin-top: 12vh;
+  }
+
+  .tab--about__container {
+    background-color: #000000;
+    padding: 0px;
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+
+  .container--art__row {
+    display: block;
+    height: unset;
+    margin: 0;
+  }
+  .container--art__row a {
+    margin: 50px auto 0px auto;
+    max-width: 75%;
+  }
+}
+@media screen and (min-width: 801px) {
+  .nav__tab-links {
+    margin: 2px 1px 0px 1px;
+  }
+
+  .tab--web-projects {
+    margin-bottom: 20px;
+  }
+  .tab--web-projects .tab--web-projects__left {
+    margin-left: 25%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
