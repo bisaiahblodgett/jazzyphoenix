@@ -106,7 +106,7 @@ body.faded-in {
 .header {
   background-color: #373538;
 }
-.header #logo {
+.header .logo {
   max-width: 130px;
   margin: 20px;
   cursor: pointer;

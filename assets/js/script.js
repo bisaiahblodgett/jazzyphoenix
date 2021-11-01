@@ -34,8 +34,8 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (screen.width > 801 && document.documentElement.scrollTop > 100) {
-    document.getElementById("logo").style.display = "none";
+    document.getElementsByClassName("logo").style.display = "none";
 } else {
-    document.getElementById("logo").style.display = "inline-block";
+    document.getElementsByClassName("logo").style.display = "inline-block";
   }
 };
