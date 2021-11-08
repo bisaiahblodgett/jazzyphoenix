@@ -3,7 +3,7 @@
 */
 
 /*
-** Variables.
+** Variables
 */
 $font_primary: "arial";
 $font_secondary: "helvetica";
@@ -17,7 +17,7 @@ $orange: #f25a23;
 $space: 20px;
 
 /*
-** Global elements.
+** Global elements
 */
 h2 {
    font-family: $font_primary;
@@ -29,8 +29,8 @@ h2 {
 
 a {
    font-family: $font_secondary;
-   letter-spacing: .08em;
    font-size: 14px;
+   letter-spacing: .08em;
    line-height: 1.4em;
    text-decoration: unset;
 }
@@ -38,9 +38,9 @@ a {
 .tab--about__container,
 .tab--music__left {
    font-family: $font_secondary;
+   font-size: 14px;
    color: $light_gray;
    letter-spacing: .08em;
-   font-size: 14px;
    line-height: 1.4em;
 }
 
@@ -63,10 +63,6 @@ li::selection {
   width: 100%;
   position: fixed;
   top: 0;
-}
-
-body {
-  opacity: 0;
 }
 
 //Fade in animation on load.
@@ -129,7 +125,7 @@ body.faded-in {
     display: flex;
     flex-grow: 1;
 
-    .buttonText {
+    .nav__link-text {
       margin: 0 auto;
       font-family: $font_primary;
       text-transform: uppercase;
@@ -145,16 +141,16 @@ body.faded-in {
   }
 
   .nav__tab-links:focus {
-    outline:none;
+    outline: none;
   }
-} //------End #tab
+} //------End .nav
 
-//Hides content by default
+//Hides content by default.
 .tab {
   display: none;
 }
 
-//Cube Animation
+//Cube Animation.
 @-webkit-keyframes animate {
 0% {
     transform: rotate(0deg)
@@ -192,21 +188,21 @@ body.faded-in {
 }
 
 @media screen and (max-width: 700px) { //------Mobile
-    .animation {
-        width: 100px;
-        height: 100px;
-        top: 15px;
-        right: 15px;
-    }
+  .animation {
+    width: 100px;
+    height: 100px;
+    top: 15px;
+    right: 15px;
+  }
 }
 
 @media screen and (min-width: 701px) {//------Desktop
-    .animation {
-        height: 250px;
-        width: 250px;
-        bottom: 60px;
-        right: 0px;
-    }
+  .animation {
+    height: 250px;
+    width: 250px;
+    bottom: 60px;
+    right: 0px;
+  }
 }
 
 .animation {
@@ -224,7 +220,6 @@ body.faded-in {
 /*
 ** About Page
 */
-
 .tab--about {
   .tab--about__container {
     margin-top: 38vh;
@@ -454,7 +449,6 @@ body.faded-in {
 /*
 ** Music
 */
-
 .tab--music {
   .tab--music__container {
      width: 100%;
@@ -472,7 +466,7 @@ body.faded-in {
 
      @media screen and (min-width: 701px) {//------Desktop
        .tab--music__left {
-        margin: 38vh 0px 30px 100px;
+         margin: 38vh 0px 30px 100px;
 
           .album-cover {
              width: 25%;

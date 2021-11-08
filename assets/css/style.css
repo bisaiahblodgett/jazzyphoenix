@@ -2,10 +2,10 @@
 ** To compile in terminal: sass [path]/style.scss [path]/style.css
 */
 /*
-** Variables.
+** Variables
 */
 /*
-** Global elements.
+** Global elements
 */
 h2 {
   font-family: "arial";
@@ -17,8 +17,8 @@ h2 {
 
 a {
   font-family: "helvetica";
-  letter-spacing: 0.08em;
   font-size: 14px;
+  letter-spacing: 0.08em;
   line-height: 1.4em;
   text-decoration: unset;
 }
@@ -26,9 +26,9 @@ a {
 .tab--about__container,
 .tab--music__left {
   font-family: "helvetica";
+  font-size: 14px;
   color: #ababab;
   letter-spacing: 0.08em;
-  font-size: 14px;
   line-height: 1.4em;
 }
 
@@ -50,10 +50,6 @@ li::selection {
   width: 100%;
   position: fixed;
   top: 0;
-}
-
-body {
-  opacity: 0;
 }
 
 body.faded-in {
@@ -128,7 +124,7 @@ body.faded-in {
   display: flex;
   flex-grow: 1;
 }
-.nav .nav__tab-links .buttonText {
+.nav .nav__tab-links .nav__link-text {
   margin: 0 auto;
   font-family: "arial";
   text-transform: uppercase;

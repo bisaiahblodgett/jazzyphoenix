@@ -19,11 +19,20 @@
 		<header class="header">
 			<img src="assets/img/jpLogo.png" class="logo" onclick="openPage(event, 'tab--about');addActive()"></header>
 		</header>
+
 		<div class="nav">
-			<button onclick="openPage(event, 'tab--about')" class="nav__tab-links" id="defaultOpen"><span class="buttonText">About Me</span></button>
-			<button onclick="openPage(event, 'tab--web-projects')" class="nav__tab-links" id="nav-button-2"><span class="buttonText">Web Projects</span></button>
-			<button onclick="openPage(event, 'tab--art')" class="nav__tab-links hide-animation" id="nav-button-3"><span class="buttonText">Art</span></button>
-			<button onclick="openPage(event, 'tab--music')" class="nav__tab-links hide-animation" id="nav-button-4"><span class="buttonText">Music</span></button>
+			<button onclick="openPage(event, 'tab--about')" class="nav__tab-links" id="defaultOpen">
+				<span class="nav__link-text">About Me</span>
+			</button>
+			<button onclick="openPage(event, 'tab--web-projects')" class="nav__tab-links" id="nav-button-2">
+				<span class="nav__link-text">Web Projects</span>
+			</button>
+			<button onclick="openPage(event, 'tab--art')" class="nav__tab-links hide-animation" id="nav-button-3">
+				<span class="nav__link-text">Art</span>
+			</button>
+			<button onclick="openPage(event, 'tab--music')" class="nav__tab-links hide-animation" id="nav-button-4">
+				<span class="nav__link-text">Music</span>
+			</button>
 		</div>
 	</div>
 
@@ -105,7 +114,7 @@
 			</div>
 			<div class="container--art__row">
 				<a href="assets/img/worseForWear.jpg" target="_blank"><img src="assets/img/worseForWear.jpg" class="container--art__img" alt="art" style="border: 1px solid white;"></a>
-				<a href="assets/img/eggVacation.jpg" target="_blank"><img src="assets/img/eggVacation.jpg" class="container--art__img" alt="art" style="border: 1px solid white;"></a>
+				<a href="assets/img/bayou.png" target="_blank"><img src="assets/img/bayou.png" class="container--art__img" alt="art"></a>
 				<a href="assets/img/color.jpg" target="_blank"><img src="assets/img/color.jpg" class="container--art__img" alt="art" style="border: .5px solid white;"></a>
 			</div>
 			<div class="container--art__row">
@@ -115,7 +124,7 @@
 			</div>
 			<div class="container--art__row">
 				<a href="assets/img/bubba.jpg" target="_blank"><img src="assets/img/bubba.jpg" class="container--art__img" alt="art" style="border: 1px solid white;"></a>
-				<a href="assets/img/theBlock.jpg" target="_blank"><img src="assets/img/theBlock.jpg" class="container--art__img" alt="art" style="border: 1px solid white;"></a>
+				<a href="assets/img/eggVacation.jpg" target="_blank"><img src="assets/img/eggVacation.jpg" class="container--art__img" alt="art" style="border: 1px solid white;"></a>
 				<a href="assets/img/accrossTheUniverse.jpg" target="_blank"><img src="assets/img/accrossTheUniverse.jpg" class="container--art__img" alt="art" style="border: 1px solid white;"></a>
 			</div>
 		</div>
@@ -138,45 +147,46 @@
 	<!--
 	jQuery Animations.
 	-->
+	<!-- @ToDo: Move to designated file.-->
 	<script>
 		//Body fade in animation.
 		$(document).ready(function(){
-		$('body').addClass('faded-in');
+			$('body').addClass('faded-in');
 		});
 
 		//Trigger page 2 cube animation.
 		$('#defaultOpen').click(function() {
-		$(".animation").css("display","block");
+			$(".animation").css("display","block");
 		});
 
 		$('#nav-button-2').click(function() {
-		$(".animation").css("display","block");
-		$(".animation").addClass('animated');
+			$(".animation").css("display","block");
+			$(".animation").addClass('animated');
 		});
 
 		$('.hide-animation').click(function() {
-		$(".animation").css("display","none");
+			$(".animation").css("display","none");
 		});
 
 		//Art swinging animation.
 		$('.nav__tab-links').click(function() {
-		$('.container--art__img').css('display','none');
+			$('.container--art__img').css('display','none');
 		});
 
 		$('#nav-button-3').click(function() {
-		$('.container--art__img').addClass('swung');
-		$('.container--art__img').css('display','flex');
+			$('.container--art__img').addClass('swung');
+			$('.container--art__img').css('display','flex');
 		});
 
 
 		//Album cover swinging animation.
 		$('.tablinks').click(function() {
-		$('.album-cover').css('display','none');
+			$('.album-cover').css('display','none');
 		});
 
 		$('#nav-button-4').click(function() {
-		$('.album-cover').addClass('swung');
-		$('.album-cover').css('display','block');
+			$('.album-cover').addClass('swung');
+			$('.album-cover').css('display','block');
 		});
 	</script>
 </body>
